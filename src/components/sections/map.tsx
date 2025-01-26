@@ -91,7 +91,7 @@ const WayToCome = ({
       <div className={cx('txt-label')}>{label}</div>
       <ul>
         {list.map((el) => {
-          return <li>{el}</li>;
+          return <li key={el}>{el}</li>;
         })}
       </ul>
     </div>

@@ -12,6 +12,8 @@ import Calendar from './components/sections/calendar';
 import Map from './components/sections/map';
 import Contact from './components/sections/contact';
 import Share from './components/sections/share';
+import Modal from './components/shared/modal';
+import AttendCountModal from './components/attendCountModal';
 
 const cx = classNames.bind(styles);
 
@@ -70,7 +72,24 @@ const App = () => {
       <Map location={location} />
       <Contact groom={groom} bride={bride} />
       <Share groomName={groom.name} brideName={bride.name} date={date} />
-      {JSON.stringify(wedding)}
+      <AttendCountModal wedding={wedding} />
+      {/* <Modal
+        open={true}
+        title="현재 참석자"
+        body={
+          <div>
+            <input />
+          </div>
+        }
+        leftBtnLabel="취소"
+        rightBtnLabel="저장하기"
+        onClickLeftBtn={() => {
+          console.log('왼쪽');
+        }}
+        onClickRightBtn={() => {
+          console.log('오른쪽');
+        }}
+      /> */}
     </div>
   );
 };
