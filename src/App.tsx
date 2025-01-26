@@ -9,6 +9,7 @@ import ImageGallery from './components/sections/imageGallery';
 import Intro from './components/sections/intro';
 import Invitation from './components/sections/invitation';
 import Calendar from './components/sections/calendar';
+import Map from './components/sections/map';
 
 const cx = classNames.bind(styles);
 
@@ -23,7 +24,6 @@ const App = () => {
       if (!data.ok) {
         throw new Error('청접장 데이터를 불러오지 못했습니다.');
       }
-      console.log(data);
       const res = await data.json();
       setWedding(res);
     } catch (error) {
@@ -53,6 +53,7 @@ const App = () => {
   } = wedding;
   return (
     <div className={cx('container')}>
+      <Map location={location} />
       <Heading date={date} />
       <Video />
       <Intro

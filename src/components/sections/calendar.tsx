@@ -32,7 +32,6 @@ const css = `
 
 const Calendar = ({ date }: { date: string }) => {
   const weddingDate = parseISO(date);
-  console.log(weddingDate);
 
   return (
     <Section
