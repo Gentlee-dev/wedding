@@ -27,8 +27,8 @@ const AttendCountModal = ({ wedding }: { wedding: Wedding }) => {
         </div>
       ),
       onClickLeftBtn: () => {
-        console.log(1);
         localStorage.setItem('@have-seen-modal', 'true');
+        close();
       },
       onClickRightBtn: async () => {
         if ($input.current === null) return;
