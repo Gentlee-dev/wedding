@@ -10,6 +10,7 @@ import Intro from './components/sections/intro';
 import Invitation from './components/sections/invitation';
 import Calendar from './components/sections/calendar';
 import Map from './components/sections/map';
+import Contact from './components/sections/contact';
 
 const cx = classNames.bind(styles);
 
@@ -53,7 +54,6 @@ const App = () => {
   } = wedding;
   return (
     <div className={cx('container')}>
-      <Map location={location} />
       <Heading date={date} />
       <Video />
       <Intro
@@ -66,6 +66,8 @@ const App = () => {
       <Invitation msg={invitation} />
       <ImageGallery images={galleryImages} />
       <Calendar date={date} />
+      <Map location={location} />
+      <Contact groom={groom} bride={bride} />
       {JSON.stringify(wedding)}
     </div>
   );

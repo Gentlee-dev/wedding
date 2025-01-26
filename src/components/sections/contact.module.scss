@@ -1,0 +1,26 @@
+.wrap-contact{
+    display: flex;
+    padding: 8px;
+    
+    .wrap-contact-info{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+    }
+
+    .wrap-btns{
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            background-color: #fff;
+            font-weight: 400;
+            width: 52px;
+            height: 24px;
+            border: 1px solid var(--black);
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+    }
+}
