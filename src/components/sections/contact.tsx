@@ -5,12 +5,6 @@ import Section from '@shared/section';
 import { Location, Person, Wedding } from '@models/wedding';
 import Accordion from '../shared/accordion';
 
-declare global {
-  interface Window {
-    kakao: any;
-  }
-}
-
 const cx = classNames.bind(styles);
 
 const Contact = ({

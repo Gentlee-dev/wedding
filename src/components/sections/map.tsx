@@ -23,7 +23,6 @@ const Map = ({ location }: { location: Location }) => {
     document.head.appendChild(script);
 
     script.onload = () => {
-      console.log(window.kakao);
       window.kakao.maps.load(() => {
         const position = new window.kakao.maps.LatLng(
           location.lat,
